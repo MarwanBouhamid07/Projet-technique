@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Groupes Musculaires</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+<div class="flex min-h-screen">
+
+    <aside class="w-64 bg-gray-800 text-white p-6">
+
+        <h1 class="text-2xl font-bold mb-8">
+            Dashboard
+        </h1>
+
+        <nav>
+            <a href="#" class="block p-3">
+                Tableau de bord
+            </a>
+
+            <a href="#" class="block p-3">
+                Workouts
+            </a>
+
+            <a href="#" class="block p-3 bg-gray-700">
+                Groupes musculaires
+            </a>
+        </nav>
+
+    </aside>
+
+    <main class="flex-1 p-8">
+
+        <div class="flex justify-between mb-8">
+
+            <div>
+                <h2 class="text-3xl font-bold">
+                    Gestion des Groupes Musculaires
+                </h2>
+            </div>
+
+            <button
+                id="btn-nouveau"
+                class="bg-blue-600 text-white px-5 py-3">
+                + Nouveau groupe musculaire
+            </button>
+
+        </div>
+
+
+        <div id="section_form" class="p-6 bg-white mb-4 hidden">
+
+            <h3 class="text-xl font-bold mb-6">
+                Ajouter un groupe musculaire
+            </h3>
+
+            <form id="form-groupe-musculaire">
+
+                <label class="block mb-2">
+                    Nom du groupe musculaire
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Nom du groupe musculaire"
+                    class="w-full border p-3 mb-4"
+                    required>
+
+                <label class="block mb-2">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    placeholder="Description du groupe musculaire"
+                    class="w-full border p-3 mb-4"
+                    required></textarea>
+
+
+                <button
+                    type="submit"
+                    class="bg-blue-600 text-white px-5 py-2">
+                    Enregistrer
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-annuler"
+                    class="bg-gray-400 text-white px-5 py-2">
+                    Annuler
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="bg-white">
+
+            <table class="w-full">
+
+                <thead class="bg-gray-800 text-white">
+
+                    <tr>
+                        <th class="p-4 text-left">ID</th>
+                        <th class="p-4 text-left">Nom</th>
+                        <th class="p-4 text-left">Description</th>
+                        <th class="p-4 text-left">Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="table-groupe-musculaire">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/groupes-musculaires.js"></script>
+
+</body>
+</html>
