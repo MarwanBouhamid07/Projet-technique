@@ -18,5 +18,15 @@
         "id_group": 4,
         "name": "ff",
         "description": "f"
+    },
+    {
+        "id_group": 5,
+        "name": "ff",
+        "description": "fd"
+    },
+    {
+        "id_group": 6,
+        "name": "tt",
+        "description": "fdf"
     }
 ]

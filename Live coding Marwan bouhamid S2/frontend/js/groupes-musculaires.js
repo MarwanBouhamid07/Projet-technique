@@ -31,19 +31,11 @@ function afficherGroupesMusculaires() {
                                 ${groupe.description}
                             </td>
 
-                            <td class="p-4">
-                                <button class="btn-supprimer bg-red-600 text-white px-3 py-1" data-id="${groupe.id_group}">
-                                    Supprimer
-                                </button>
-                            </td>
-
                         </tr>
                         `
                     );
 
                 });
-
-                ajouterEvenementsTable();
             }
 
         })
@@ -79,32 +71,8 @@ function ajouterGroupeMusculaire() {
         .catch(error => console.error(error));
 }
 
-function ajouterEvenementsTable() {
 
-    document.querySelectorAll(".btn-supprimer").forEach(btn => {
-        btn.addEventListener("click", () => supprimerGroupeMusculaire(parseInt(btn.dataset.id)));
-    });
-}
 
-function supprimerGroupeMusculaire(id_group) {
-
-    fetch(API, {
-        method: "DELETE",
-        headers: {
-            "content-type": "application/json"
-        },
-        body: JSON.stringify({
-            id_group: id_group
-        })
-    }).then(response => response.json())
-        .then(data => {
-            if (Array.isArray(data)) {
-                console.log(data);
-                afficherGroupesMusculaires();
-            }
-        })
-        .catch(error => console.error(error));
-}
 
 btnAjouter.addEventListener("click", () => {
     sectionForm.classList.remove("hidden")
